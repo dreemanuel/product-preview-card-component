@@ -80,6 +80,12 @@ p {
         text-transform: uppercase;
         letter-spacing: 0.3rem;
     }
+    .heading {
+        a:hover {
+            font-weight: $font_bold;
+            color: cyan;
+        }
+    }
     .product-title{
         margin: 1rem 0;
     }    
@@ -114,6 +120,9 @@ p {
             font-weight: $font_bold;
         }
     }
+    .main-CTA:hover {
+        background-color: $dark_blue;
+    }
 }
 
 @media only screen and (min-width: 430px) {
@@ -127,9 +136,11 @@ p {
         header {
             width: 50%;
             height: 100%;
+
             .small-screen-image {
                 display: none;
             }
+
             .large-screen-image {
                 display: block;
                 object-position: center;
@@ -138,13 +149,16 @@ p {
                 height: 100%;
             }
         }
+
         main {
             width: 50%;
+
             .product-main-div {
                 padding: 2rem;
                 display: flex;
                 flex-direction: column;
                 gap: 0;
+
                 .product-price-div {
                     flex-wrap: wrap;
                 }

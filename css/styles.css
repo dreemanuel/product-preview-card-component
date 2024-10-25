@@ -13,6 +13,9 @@ body, .card, .main-image {
   margin: 0;
   padding: 0;
 }
+* a {
+  text-decoration: none;
+}
 
 .main-image, .card, body {
   display: flex;
@@ -76,6 +79,10 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.3rem;
 }
+.product-main-div .heading a:hover {
+  font-weight: 700;
+  color: cyan;
+}
 .product-main-div .product-title {
   margin: 1rem 0;
 }
@@ -109,6 +116,9 @@ p {
 .product-main-div .main-CTA p {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
+}
+.product-main-div .main-CTA:hover {
+  background-color: hsl(212, 21%, 14%);
 }
 
 @media only screen and (min-width: 430px) {
