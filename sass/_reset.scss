@@ -1,10 +1,15 @@
+// Reset margin & paddings
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     // border: 0.1px dotted burlywood;
-    
-    a {
-        text-decoration: none;
-    }
+}
+
+// Reset link formatting
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: inherit;
+    font: inherit;
 }
