@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Product preview card component</title>
-
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,9 +14,16 @@
 </head>
 <body>
   <div class="card">
-    <header class="main-image">
+    <header class="main-image-container">
+      <picture class="main-image">
+        <source srcset="./assets/images/image-product-desktop.jpg" media="(min-width: 500px)" />
+        <!-- <source srcset="./assets/images/image-product-mobile.jpg" media="(max-width: 614px)" /> -->
+        <img src="./assets/images/image-product-mobile.jpg" alt="Product photo of Gabrielle Essence Eau De Parfum" style="width:auto" />
+      </picture>
+      <!--
       <img class="small-screen-image" src="./assets/images/image-product-mobile.jpg" alt="product image of Gabrielle Essence Eau De Parfum "/>
       <img class="large-screen-image" src="./assets/images/image-product-desktop.jpg" alt="product photo of Gabrielle Essence Eau De Parfum" />
+      -->
     </header>
     <main>
       <div class="product-main-div">

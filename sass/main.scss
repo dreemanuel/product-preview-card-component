@@ -1,30 +1,10 @@
-@use 'functions';
+// Product Preview Card Component - FEM 5
+@use 'functions' as *;
 @use 'import';
-@use 'mixins';
-@use 'variables';
+@use 'mixins' as *;
+@use 'variables' as *;
 @use 'reset';
 @use 'mediaq';
-
-$dark_cyan: hsl(158, 36%, 37%);
-$cream: hsl(30, 38%, 92%);
-
-$dark_blue: hsl(212, 21%, 14%);
-$gray_blue: hsl(228, 12%, 48%);
-$white: hsl(0, 0%, 100%);
-
-$header_font: fraunces;
-$body_font: montserrat;
-
-$font_normal: 500;
-$font_bold: 700;
-
-%fully_centered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
 
 body {
     @extend %fully_centered;
@@ -59,18 +39,29 @@ p {
     margin: auto;
 }
 
-.main-image {
+.main-image-container {
     @extend %fully_centered;
     overflow: hidden;
-    .small-screen-image {
+    width: 100%;
+
+    picture img {
+        width: 100%;
+        height:100%;
         object-fit: cover;
         object-position: center;
-        width: 100%;
+        max-inline-size: 100%;
+        block-size: auto;
     }
-    .large-screen-image {
-        display: none;
+
+    // .small-screen-image {
+    //     object-fit: cover;
+    //     object-position: center;
+    //     width: 100%;
     }
-}
+    // .large-screen-image {
+    //     display: none;
+    // }
+  // }
 
 .product-main-div {
     padding: 1.5rem 1.5rem;
@@ -125,7 +116,7 @@ p {
     }
 }
 
-@media only screen and (min-width: 430px) {
+@media only screen and (min-width: 500px) {
     .card {
         display: flex;
         flex-direction: row;
@@ -133,25 +124,33 @@ p {
         min-width: 430px;
         border-radius: 1.25rem;
 
-        header {
-            width: 50%;
+        .main-image-container {
+            display: flex;
+            flex: 1;
             height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: red;
 
-            .small-screen-image {
-                display: none;
-            }
-
-            .large-screen-image {
-                display: block;
-                object-position: center;
-                object-fit: cover;
-                max-inline-size: 100%; // with cover, this auto-scales the image to cover the container
+            picture {
                 height: 100%;
+                width: 100%;
+                display: block;
+                // object-position: center;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                // object-fit: cover;
+                // max-inline-size: 100%; 
+                // with cover, this auto-scales the image to cover the container
             }
         }
 
         main {
-            width: 50%;
+            flex: 1;
+            // width: 50%;
 
             .product-main-div {
                 padding: 2rem;
